@@ -1,0 +1,77 @@
+.lt-sort  .list {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.lt-sort .list-left {
+  width: 75px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lt-sort .list-left ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.lt-sort .list-left li {
+  width: 75px;
+  height: 46px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.lt-sort .list-left a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 46px;
+  font-size: 11px;
+  color: #333;
+}
+
+.lt-sort .list-left a.active {
+  color: red;
+}
+
+.lt-sort .list-right {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+}
+
+.lt-sort .list-right ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  font-size: 0;
+  background-color: #fff;
+}
+
+.lt-sort .list-right li {
+  display: inline-block;
+  width: 33.333333%;
+}
+
+.lt-sort .list-right a {
+  display: block;
+}
+
+.lt-sort .list-right a {
+  display: block;
+}
+
+.lt-sort .list-right span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}

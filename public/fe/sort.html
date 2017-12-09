@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>乐淘云购</title>
+  <!-- 引入MUI的CSS文件 -->
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <!-- 引入fontAwesome字体图标库 -->
+  <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.min.css">
+  <!-- 引入公共样式 -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- 引入当前页面的CSS -->
+  <link rel="stylesheet" href="./css/sort.css">
+  <!-- 引入网站图标 -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="lt-sort">
+  <!-- 固定头部 -->
+  <header class="lt-header mui-bar mui-bar-nav">
+    <!-- mui-plus-visible -->
+    <!-- 返回上一页 -->
+    <a href="javascript:history.back();" class="fa fa-arrow-left mui-pull-left "></a>
+    <a class="fa fa-search mui-pull-right"></a>
+    <h1 class="mui-title">
+      <div class="mui-search">
+        <input type="search" class="mui-input-clear" placeholder="">
+        </span>
+      </div>
+    </h1>
+  </header>
+  <!-- 固定底部 -->
+  <footer class="lt-footer mui-bar mui-bar-tab">
+    <a class="mui-item " href="./index.html">
+      <span class="fa fa-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-item mui-active" href="./sort.html">
+      <span class="fa fa-bars"></span>
+      <span class="mui-tab-label">分类</span>
+    </a>
+    <a class="mui-item" href="./cart.html">
+      <span class="fa fa-shopping-cart"></span>
+      <span class="mui-tab-label">购物车</span>
+    </a>
+    <a class="mui-item" href="./user.html">
+      <span class="fa fa-user"></span>
+      <span class="mui-tab-label">会员中心</span>
+    </a>
+  </footer>
+  <!-- 滚动内容 -->
+  <div class="mui-content">
+    <div class="list">
+      <div class="list-left" id="list-left">
+        <ul>
+          <li>
+            <a class="active" href="javascript:;">运动馆</a>
+          </li>
+
+          <li>
+            <a href="javascript:;">女士馆</a>
+          </li>
+
+          <li>
+            <a href="javascript:;">男士馆</a>
+          </li>
+
+          <li>
+            <a href="javascript:;">帆布馆</a>
+          </li>
+          <li>
+            <a href="javascript:;">户外管</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="list-right">
+        <ul class="brand-list">
+          <li>
+            <a href="#">
+              <img src="./images/brand1.png" alt="耐克">
+              <span>耐克</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src=".//images/brand2.png" alt="阿迪">
+              <span>阿迪</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/brand3.png" alt="新百伦">
+              <span>新百伦</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/brand4.png" alt="哥伦比亚">
+              <span>哥伦比亚</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./images/brand5.png" alt="匡威">
+              <span>匡威</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 一级分类模板 -->
+  <script type="text/template" id="first-template">
+    <%for(var i=0;i<rows.length;i++){%>
+      <%if(i == 0){%>
+        <li>
+          <a class="active" data-id="<%=rows[i].id%>" href="javascript:;">
+            <%=rows[i].categoryName%>
+          </a>
+        </li>
+        <%}else{%>
+          <li>
+            <a href="javascript:;" data-id="<%=rows[i].id%>">
+              <%=rows[i].categoryName%>
+            </a>
+          </li>
+     <% } %>
+   <%}%>
+
+
+  </script>
+  <!-- 二级分类模板 -->
+  <script type="text/template" id="second-template">
+  <%if(rows.length==0){%>
+      <p>暂无商品</p>
+  <%}else{%>
+    <ul>
+      <%for(var i=0;i<rows.length;i++){%>
+        <li>
+            <a href="#">
+            <img src="<%=rows[i].brandLogo%>" alt="<%=rows[i].brandName%>">
+            <span><%=rows[i].brandName%></span>
+            </a>
+        </li>
+        <%}%>
+    </ul>
+    <%}%>
+
+
+
+  </script>
+
+
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-native.js"></script>
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./lib/iscroll/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/sort.js"></script>
+</body>
+
+</html>

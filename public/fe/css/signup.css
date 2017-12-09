@@ -1,0 +1,31 @@
+.lt-signup {}
+.lt-signup .form {
+  padding: 10px;
+}
+
+.lt-signup [type="text"][name="vCode"] {
+  width: 60%;
+  float: left;
+}
+
+.lt-signup .btn_getCode {
+  width: 35%;
+  float: left;
+  margin-left: 5%;
+  height: 40px;
+}
+
+.lt-signup .btn_register {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.lt-signup .cz_text a {
+  float: right;
+}
+
+.lt-signup .cz_text {
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+}
